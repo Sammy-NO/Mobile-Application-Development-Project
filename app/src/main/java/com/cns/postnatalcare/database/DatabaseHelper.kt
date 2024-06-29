@@ -51,9 +51,8 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
 
         // Table creation SQL statements
         private const val CREATE_USERS_TABLE = "CREATE TABLE users (id INTEGER PRIMARY KEY, username TEXT, password TEXT, email TEXT)"
-        private const val CREATE_CHILDREN_TABLE = "CREATE TABLE children (id INTEGER PRIMARY KEY, user_id INTEGER, name TEXT, birth_date TEXT)"
+        private const val CREATE_CHILDREN_TABLE = "CREATE TABLE children (id INTEGER PRIMARY KEY, user_id INTEGER, name TEXT, birth_date TEXT, profile_id TEXT)"
         private const val CREATE_VACCINES_TABLE = "CREATE TABLE vaccines (id INTEGER PRIMARY KEY, name TEXT, description TEXT, week_to_administer INTEGER)"
         private const val CREATE_SCHEDULES_TABLE = "CREATE TABLE schedules (id INTEGER PRIMARY KEY, child_id INTEGER, vaccine_id INTEGER, scheduled_date TEXT, status TEXT)"
-
     }
 }
