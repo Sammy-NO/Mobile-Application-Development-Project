@@ -24,6 +24,7 @@
 
         <!-- Declare CreateChildProfileActivity -->
         <activity android:name=".CreateChildProfileActivity"></activity>
+        <activity android:name=".CreateVaccineProfileActivity"></activity>
 
     </application>
 

@@ -7,9 +7,14 @@
     android:padding="16dp">
 
     <Button
-        android:id="@+id/buttonCreateProfile"
+        android:id="@+id/buttonCreateChildProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Create Child Profile" />
+    <Button
+        android:id="@+id/buttonCreateVaccineProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Vaccine Profile"/>
 
 </LinearLayout>

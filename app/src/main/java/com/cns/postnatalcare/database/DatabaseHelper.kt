@@ -11,6 +11,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         db.execSQL(CREATE_CHILDREN_TABLE)
         db.execSQL(CREATE_VACCINES_TABLE)
         db.execSQL(CREATE_SCHEDULES_TABLE)
+        db.execSQL(CREATE_PROFILES_TABLE)
         insertVaccines(db)
     }
 
@@ -50,9 +51,10 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         private const val DATABASE_VERSION = 1
 
         // Table creation SQL statements
-        private const val CREATE_USERS_TABLE = "CREATE TABLE users (id INTEGER PRIMARY KEY, username TEXT, password TEXT, email TEXT)"
-        private const val CREATE_CHILDREN_TABLE = "CREATE TABLE children (id INTEGER PRIMARY KEY, user_id INTEGER, name TEXT, birth_date TEXT, profile_id TEXT)"
-        private const val CREATE_VACCINES_TABLE = "CREATE TABLE vaccines (id INTEGER PRIMARY KEY, name TEXT, description TEXT, week_to_administer INTEGER)"
-        private const val CREATE_SCHEDULES_TABLE = "CREATE TABLE schedules (id INTEGER PRIMARY KEY, child_id INTEGER, vaccine_id INTEGER, scheduled_date TEXT, status TEXT)"
+        private const val CREATE_USERS_TABLE = "CREATE TABLE users (user_id INTEGER PRIMARY KEY, username TEXT, password TEXT, email TEXT)"
+        private const val CREATE_CHILDREN_TABLE = "CREATE TABLE children (child_id INTEGER PRIMARY KEY, user_id INTEGER, name TEXT, birth_date TEXT, profile_id TEXT)"
+        private const val CREATE_VACCINES_TABLE = "CREATE TABLE vaccines (vaccine_id INTEGER PRIMARY KEY, name TEXT, description TEXT, week_to_administer INTEGER)"
+        private const val CREATE_SCHEDULES_TABLE = "CREATE TABLE schedules (schedule_id INTEGER PRIMARY KEY, child_id INTEGER, vaccine_id INTEGER, scheduled_date TEXT, status TEXT)"
+        private const val CREATE_PROFILES_TABLE = "CREATE TABLE profiles (profile_id INTEGER PRIMARY KEY, vaccine_id INTEGER, status BOOLEAN, remaining time)"
     }
 }

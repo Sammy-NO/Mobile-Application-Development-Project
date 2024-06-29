@@ -12,11 +12,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val buttonCreateProfile: Button = findViewById(R.id.buttonCreateProfile)
-        buttonCreateProfile.setOnClickListener {
+        val buttonCreateChildProfile: Button = findViewById(/* id = */ R.id.buttonCreateChildProfile)
+        buttonCreateChildProfile.setOnClickListener {
             val intent = Intent(this, CreateChildProfileActivity::class.java)
             startActivity(intent)
         }
+
+        val buttonCreateVaccineProfile: Button = findViewById(R.id.buttonCreateVaccineProfile)
+        buttonCreateVaccineProfile.setOnClickListener {
+            val intent = Intent(this, CreateVaccineProfileActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
 
