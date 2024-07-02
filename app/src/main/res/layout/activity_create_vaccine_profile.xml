@@ -6,23 +6,35 @@
     android:padding="16dp">
 
     <EditText
-        android:id="@+id/editTextChildName"
+        android:id="@+id/addTextChildName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Child's Name"
+        android:hint="Name of your child"
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/editTextBirthDate"
+        android:id="@+id/editAgeInWeeks"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Birth Date (yyyy-mm-dd)"
-        android:inputType="date" />
+        android:hint="Age in weeks"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/buttonSelectVaccines"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Vaccines" />
+
+    <TextView
+        android:id="@+id/textViewSelectedChoices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selected Vaccines" />
 
     <Button
         android:id="@+id/buttonSave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Save" />
+        android:text="@string/save" />
 
 </LinearLayout>
