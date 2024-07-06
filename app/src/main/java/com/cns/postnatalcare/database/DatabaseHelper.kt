@@ -3,20 +3,30 @@ package com.cns.postnatalcare.database
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.util.Log
+import java.sql.SQLException
 
 class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
     override fun onCreate(db: SQLiteDatabase) {
+        try{
         db.execSQL(CREATE_USERS_TABLE)
         db.execSQL(CREATE_CHILDREN_TABLE)
         db.execSQL(CREATE_VACCINES_TABLE)
         db.execSQL(CREATE_SCHEDULES_TABLE)
         db.execSQL(CREATE_PROFILES_TABLE)
-        insertVaccines(db)
+        insertVaccines(db) } catch (e: SQLException){
+            Log.e("DatabaseHelper", "Error creating tables", e)
+        }
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
-        // Handle database upgrade as needed
+        db.execSQL("DROP TABLE IF EXISTS profiles")
+        db.execSQL("DROP TABLE IF EXISTS schedules")
+        db.execSQL("DROP TABLE IF EXISTS children")
+        db.execSQL("DROP TABLE IF EXISTS users")
+        db.execSQL("DROP TABLE IF EXISTS vaccines")
+        onCreate(db)
     }
 
     private fun insertVaccines(db: SQLiteDatabase) {
@@ -46,15 +56,61 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         // Add more vaccines as needed
     }
 
+
     companion object {
         private const val DATABASE_NAME = "vaccine_scheduler.db"
-        private const val DATABASE_VERSION = 1
+        private const val DATABASE_VERSION = 3
 
         // Table creation SQL statements
-        private const val CREATE_USERS_TABLE = "CREATE TABLE users (user_id INTEGER PRIMARY KEY, username TEXT, password TEXT, email TEXT)"
-        private const val CREATE_CHILDREN_TABLE = "CREATE TABLE children (child_id INTEGER PRIMARY KEY, user_id INTEGER, name TEXT, birth_date TEXT, profile_id TEXT)"
-        private const val CREATE_VACCINES_TABLE = "CREATE TABLE vaccines (vaccine_id INTEGER PRIMARY KEY, name TEXT, description TEXT, week_to_administer INTEGER)"
-        private const val CREATE_SCHEDULES_TABLE = "CREATE TABLE schedules (schedule_id INTEGER PRIMARY KEY, child_id INTEGER, vaccine_id INTEGER, scheduled_date TEXT, status TEXT)"
-        private const val CREATE_PROFILES_TABLE = "CREATE TABLE profiles (profile_id INTEGER PRIMARY KEY, vaccine_id INTEGER, status BOOLEAN, remaining time)"
+        private const val CREATE_USERS_TABLE = """
+    CREATE TABLE users (
+        user_id INTEGER PRIMARY KEY, 
+        username TEXT, 
+        password TEXT, 
+        email TEXT
+    )
+"""
+
+        private const val CREATE_CHILDREN_TABLE = """
+    CREATE TABLE children (
+        child_id INTEGER PRIMARY KEY, 
+        user_id INTEGER, 
+        name TEXT, 
+        birth_date TEXT, 
+        FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
+    )
+"""
+
+        private const val CREATE_VACCINES_TABLE = """
+    CREATE TABLE vaccines (
+        vaccine_id INTEGER PRIMARY KEY, 
+        name TEXT, 
+        description TEXT, 
+        week_to_administer INTEGER
+    )
+"""
+
+        private const val CREATE_SCHEDULES_TABLE = """
+    CREATE TABLE schedules (
+        schedule_id INTEGER PRIMARY KEY, 
+        child_id INTEGER, 
+        vaccine_id INTEGER, 
+        scheduled_date TEXT, 
+        status TEXT, 
+        FOREIGN KEY (child_id) REFERENCES children(child_id) ON DELETE CASCADE, 
+        FOREIGN KEY (vaccine_id) REFERENCES vaccines(vaccine_id) ON DELETE CASCADE
+    )
+"""
+
+        private const val CREATE_PROFILES_TABLE = """
+    CREATE TABLE profiles (
+        profile_id INTEGER PRIMARY KEY, 
+        vaccine_id INTEGER, 
+        status INTEGER, 
+        remaining_time INTEGER, 
+        FOREIGN KEY (vaccine_id) REFERENCES vaccines(vaccine_id) ON DELETE CASCADE
+    )
+"""
+
     }
 }

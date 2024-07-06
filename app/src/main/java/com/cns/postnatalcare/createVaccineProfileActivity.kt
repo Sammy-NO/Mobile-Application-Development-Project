@@ -7,8 +7,6 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import android.widget.ArrayAdapter
-import android.widget.Spinner
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.cns.postnatalcare.database.DatabaseHelper
@@ -16,7 +14,7 @@ import com.cns.postnatalcare.database.DatabaseHelper
 class CreateVaccineProfileActivity : AppCompatActivity() {
 
     private lateinit var databaseHelper: DatabaseHelper
-    private val choices = arrayOf("BCG", "OPV0", "OPV1", "OPV2", "ROTA1", "DPT1", "HepB1", "PCV1", "OPV2", "ROTA2", "DPT2", "HepB2", "PCV2", "OPV3", "IPV", "DPT3", "HepB3", "PCV3", "MR1", "YF-VAX","MR2" )
+    private val choices = arrayOf("BCG", "OPV0", "OPV1", "OPV2", "ROTA1", "DPT1", "HepB1", "PCV1", "OPV2", "ROTA2", "DPT2", "HepB2", "PCV2", "OPV3", "IPV", "DPT3", "HepB3", "PCV3", "MR1", "YF-VAX","MR2" ) // Your actual vaccine choices
     private val selectedChoices = BooleanArray(choices.size)
 
     @SuppressLint("MissingInflatedId")
@@ -78,22 +76,43 @@ class CreateVaccineProfileActivity : AppCompatActivity() {
         return selectedItems
     }
 
-    private fun saveVaccineProfile(name: String, ageWeeks: Int, vaccines: List<String>) {
+    private fun saveVaccineProfile(name: String, ageWeeks: Int, selectedVaccines: List<String>) {
         val db = databaseHelper.writableDatabase
-        for (vaccine in vaccines) {
+        val allVaccines = getAllVaccines()
+
+        for (vaccine in allVaccines) {
+            val isSelected = selectedVaccines.contains(vaccine.name)
+            val remainingTime = vaccine.weekToAdminister - ageWeeks
+
             val values = ContentValues().apply {
-                put("child_name", name)
-                put("age_weeks", ageWeeks)
-                put("vaccine", vaccine)
+                put("vaccine_id", vaccine.id)
+                put("status", if (isSelected) 1 else 0) // Use 1 for true and 0 for false
+                put("remaining_time", remainingTime)
             }
-            val newRowId = db.insert("vaccine_profiles", null, values)
+            val newRowId = db.insert("profiles", null, values)
 
             if (newRowId == -1L) {
-                Toast.makeText(this, "Error creating vaccine profile for $vaccine", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Error creating vaccine profile for ${vaccine.name}", Toast.LENGTH_SHORT).show()
                 return
             }
         }
         Toast.makeText(this, "Vaccine profile created successfully", Toast.LENGTH_SHORT).show()
         finish()  // Close the activity after saving
     }
+
+    private fun getAllVaccines(): List<Vaccine> {
+        val db = databaseHelper.readableDatabase
+        val cursor = db.query("vaccines", null, null, null, null, null, null)
+        val vaccines = mutableListOf<Vaccine>()
+        while (cursor.moveToNext()) {
+            val id = cursor.getInt(cursor.getColumnIndexOrThrow("vaccine_id"))
+            val name = cursor.getString(cursor.getColumnIndexOrThrow("name"))
+            val weekToAdminister = cursor.getInt(cursor.getColumnIndexOrThrow("week_to_administer"))
+            vaccines.add(Vaccine(id, name, weekToAdminister))
+        }
+        cursor.close()
+        return vaccines
+    }
+
+    data class Vaccine(val id: Int, val name: String, val weekToAdminister: Int)
 }
