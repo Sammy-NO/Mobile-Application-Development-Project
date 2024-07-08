@@ -52,16 +52,14 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         db.execSQL("INSERT INTO vaccines (name, description, week_to_administer) VALUES ('MR2', 'Measles , Rubella', 78)")
 
 
-
-        // Add more vaccines as needed
     }
 
 
     companion object {
         private const val DATABASE_NAME = "vaccine_scheduler.db"
-        private const val DATABASE_VERSION = 3
+        private const val DATABASE_VERSION = 4
 
-        // Table creation SQL statements
+
         private const val CREATE_USERS_TABLE = """
     CREATE TABLE users (
         user_id INTEGER PRIMARY KEY, 
@@ -105,10 +103,12 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         private const val CREATE_PROFILES_TABLE = """
     CREATE TABLE profiles (
         profile_id INTEGER PRIMARY KEY, 
+        child_id INTEGER,
         vaccine_id INTEGER, 
         status INTEGER, 
         remaining_time INTEGER, 
-        FOREIGN KEY (vaccine_id) REFERENCES vaccines(vaccine_id) ON DELETE CASCADE
+        FOREIGN KEY (vaccine_id) REFERENCES vaccines(vaccine_id) ON DELETE CASCADE,
+        FOREIGN KEY (child_id) REFERENCES children(child_id) ON DELETE CASCADE
     )
 """
 

@@ -4,17 +4,20 @@ import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.ContentValues
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
+import android.widget.Spinner
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.cns.postnatalcare.database.DatabaseHelper
 
 class CreateVaccineProfileActivity : AppCompatActivity() {
 
     private lateinit var databaseHelper: DatabaseHelper
-    private val choices = arrayOf("BCG", "OPV0", "OPV1", "OPV2", "ROTA1", "DPT1", "HepB1", "PCV1", "OPV2", "ROTA2", "DPT2", "HepB2", "PCV2", "OPV3", "IPV", "DPT3", "HepB3", "PCV3", "MR1", "YF-VAX","MR2" ) // Your actual vaccine choices
+    private lateinit var spinnerChildName: Spinner
+    private val choices = arrayOf("BCG", "OPV0", "OPV1", "OPV2", "ROTA1", "DPT1", "HepB1", "PCV1", "OPV2", "ROTA2", "DPT2", "HepB2", "PCV2", "OPV3", "IPV", "DPT3", "HepB3", "PCV3", "MR1", "YF-VAX", "MR2") // Your actual vaccine choices
     private val selectedChoices = BooleanArray(choices.size)
 
     @SuppressLint("MissingInflatedId")
@@ -23,25 +26,27 @@ class CreateVaccineProfileActivity : AppCompatActivity() {
         setContentView(R.layout.activity_create_vaccine_profile) // Correct layout file
 
         databaseHelper = DatabaseHelper(this)
-        val addTextChildName: EditText = findViewById(R.id.addTextChildName)
+        spinnerChildName = findViewById(R.id.spinnerChildName)
         val editAgeInWeeks: EditText = findViewById(R.id.editAgeInWeeks)
         val buttonSave: Button = findViewById(R.id.buttonSave)
         val textViewSelectedChoices: TextView = findViewById(R.id.textViewSelectedChoices)
         val buttonSelectVaccines: Button = findViewById(R.id.buttonSelectVaccines)
+
+        populateChildSpinner()
 
         buttonSelectVaccines.setOnClickListener {
             showMultiSelectDialog()
         }
 
         buttonSave.setOnClickListener {
-            val childName = addTextChildName.text.toString()
+            val selectedChild = spinnerChildName.selectedItem as? Child
             val ageWeeksText = editAgeInWeeks.text.toString()
             val selectedVaccines = getSelectedVaccines()
 
-            if (childName.isNotEmpty() && ageWeeksText.isNotBlank() && selectedVaccines.isNotEmpty()) {
+            if (selectedChild != null && ageWeeksText.isNotBlank() && selectedVaccines.isNotEmpty()) {
                 val ageWeeks = ageWeeksText.toIntOrNull()
                 if (ageWeeks != null) {
-                    saveVaccineProfile(childName, ageWeeks, selectedVaccines)
+                    saveVaccineProfile(selectedChild.id, ageWeeks, selectedVaccines)
                 } else {
                     Toast.makeText(this, "Please enter a valid number for age in weeks", Toast.LENGTH_SHORT).show()
                 }
@@ -49,6 +54,13 @@ class CreateVaccineProfileActivity : AppCompatActivity() {
                 Toast.makeText(this, "Please enter all details", Toast.LENGTH_SHORT).show()
             }
         }
+    }
+
+    private fun populateChildSpinner() {
+        val children = getAllChildren()
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, children)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinnerChildName.adapter = adapter
     }
 
     private fun showMultiSelectDialog() {
@@ -76,7 +88,7 @@ class CreateVaccineProfileActivity : AppCompatActivity() {
         return selectedItems
     }
 
-    private fun saveVaccineProfile(name: String, ageWeeks: Int, selectedVaccines: List<String>) {
+    private fun saveVaccineProfile(childId: Int, ageWeeks: Int, selectedVaccines: List<String>) {
         val db = databaseHelper.writableDatabase
         val allVaccines = getAllVaccines()
 
@@ -85,6 +97,7 @@ class CreateVaccineProfileActivity : AppCompatActivity() {
             val remainingTime = vaccine.weekToAdminister - ageWeeks
 
             val values = ContentValues().apply {
+                put("child_id", childId)
                 put("vaccine_id", vaccine.id)
                 put("status", if (isSelected) 1 else 0) // Use 1 for true and 0 for false
                 put("remaining_time", remainingTime)
@@ -114,5 +127,23 @@ class CreateVaccineProfileActivity : AppCompatActivity() {
         return vaccines
     }
 
+    private fun getAllChildren(): List<Child> {
+        val db = databaseHelper.readableDatabase
+        val cursor = db.query("children", null, null, null, null, null, null)
+        val children = mutableListOf<Child>()
+        while (cursor.moveToNext()) {
+            val id = cursor.getInt(cursor.getColumnIndexOrThrow("child_id"))
+            val name = cursor.getString(cursor.getColumnIndexOrThrow("name"))
+            children.add(Child(id, name))
+        }
+        cursor.close()
+        return children
+    }
+
     data class Vaccine(val id: Int, val name: String, val weekToAdminister: Int)
+    data class Child(val id: Int, val name: String) {
+        override fun toString(): String {
+            return name
+        }
+    }
 }
