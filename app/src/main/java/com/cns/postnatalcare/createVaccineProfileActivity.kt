@@ -99,7 +99,7 @@ class CreateVaccineProfileActivity : AppCompatActivity() {
             val values = ContentValues().apply {
                 put("child_id", childId)
                 put("vaccine_id", vaccine.id)
-                put("status", if (isSelected) 1 else 0) // Use 1 for true and 0 for false
+                put("status", if (isSelected) 0 else 1)
                 put("remaining_time", remainingTime)
             }
             val newRowId = db.insert("profiles", null, values)

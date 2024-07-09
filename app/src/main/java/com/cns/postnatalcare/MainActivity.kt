@@ -24,6 +24,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val buttonViewProfiles: Button = findViewById(R.id.buttonViewProfiles)
+        buttonViewProfiles.setOnClickListener {
+            val intent = Intent(this, ViewProfilesActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
 

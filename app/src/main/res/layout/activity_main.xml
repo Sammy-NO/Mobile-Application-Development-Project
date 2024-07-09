@@ -17,4 +17,10 @@
         android:layout_height="wrap_content"
         android:text="Create Vaccine Profile"/>
 
+    <Button
+        android:id="@+id/buttonViewProfiles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View saved Vaccine Profiles"/>
+
 </LinearLayout>

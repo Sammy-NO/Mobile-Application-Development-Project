@@ -13,7 +13,7 @@
         android:theme="@style/Theme.PostNatalCare"
         tools:targetApi="31">
 
-        <!-- Declare MainActivity as the default launch activity -->
+
         <activity android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -22,9 +22,10 @@
             </intent-filter>
         </activity>
 
-        <!-- Declare CreateChildProfileActivity -->
         <activity android:name=".CreateChildProfileActivity"></activity>
         <activity android:name=".CreateVaccineProfileActivity"></activity>
+        <activity android:name=".ViewProfilesActivity" />
+
 
     </application>
 
