@@ -23,4 +23,11 @@
         android:layout_height="wrap_content"
         android:text="View saved Vaccine Profiles"/>
 
+    <Button
+        android:id="@+id/buttonSetReminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set a vaccine reminder"
+        />
+
 </LinearLayout>

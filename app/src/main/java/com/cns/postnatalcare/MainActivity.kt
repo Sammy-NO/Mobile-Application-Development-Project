@@ -30,6 +30,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val buttonSetReminder: Button = findViewById(R.id.buttonSetReminder)
+        buttonSetReminder.setOnClickListener {
+            val intent = Intent(this, ReminderSettingsActivity::class.java)
+            startActivity(intent)
+        }
+
+
     }
 }
 
