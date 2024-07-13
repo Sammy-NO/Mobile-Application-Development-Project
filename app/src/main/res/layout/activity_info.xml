@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/vaccineInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please select the vaccines your child is yet to receive. If unsure, please consult your child's immunization sheet or your physician. Provided below is the common immunization schedule for children in Kenya. DISCLAIMER: This is simply a tool to help you manage your schedules. The schedule provided below is valid as of 12/07/2024. Consult with your doctor before having any medicine administered to your child. The developer WILL NOT be responsible for any negligence on the part of the parent." />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="601dp"
+        android:contentDescription="Vaccine Schedule"
+        android:src="@drawable/vaccination_schedule" />
+
+
+</LinearLayout>

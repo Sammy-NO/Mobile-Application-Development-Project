@@ -3,10 +3,12 @@ package com.cns.postnatalcare
 import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.ContentValues
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
@@ -31,6 +33,12 @@ class CreateVaccineProfileActivity : AppCompatActivity() {
         val buttonSave: Button = findViewById(R.id.buttonSave)
         val textViewSelectedChoices: TextView = findViewById(R.id.textViewSelectedChoices)
         val buttonSelectVaccines: Button = findViewById(R.id.buttonSelectVaccines)
+        val vaccineViewTooltip: ImageView = findViewById(R.id.vaccineViewTooltip)
+
+        vaccineViewTooltip.setOnClickListener{
+            val intent = Intent(this,InfoActivity::class.java)
+            startActivity(intent)
+        }
 
         populateChildSpinner()
 

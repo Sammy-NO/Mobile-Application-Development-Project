@@ -27,6 +27,7 @@
         <activity android:name=".CreateVaccineProfileActivity"></activity>
         <activity android:name=".ViewProfilesActivity" />
         <activity android:name=".ReminderSettingsActivity" />
+        <activity android:name=".InfoActivity"/>
 
 
     </application>
