@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="editTextPatientName" type="id" />
+    <item name="editTextPatientAge" type="id" />
+    <item name="buttonConfirm" type="id" />
+    <item name="faqListView" type="id" />
+    <item name="inquiryEditText" type="id" />
+    <item name="sendInquiryButton" type="id" />
+    <item name="confirmButton" type="id" />
+    <item name="patientName" type="id" />
+    <item name="doctorSpinner" type="id" />
+    <item name="patientAge" type="id" />
+    <item name="nav_scheduling" type="id" />
+    <item name="nav_faq_inquiries" type="id" />
+    <item name="fragment_container" type="id" />
+    <item name="bottom_navigation" type="id" />
+</resources>

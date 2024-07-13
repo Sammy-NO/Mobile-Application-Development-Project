@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PostNatalApp</string>
+    <string name="contact_details">
+        Phone: 123-456-7890\nEmail: example@email.com\nAddress: 123 Main St, City, Country
+    </string>
+    <string name="patient_name">Patient Name</string>
+    <string name="patient_age">Patient Age</string>
+    <string name="confirm_appointment">Confirm Appointment</string>
+</resources>
