@@ -37,11 +37,12 @@
             android:layout_gravity="center_vertical" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:orientation="vertical"
-            android:layout_marginStart="16dp">
+            android:layout_marginStart="16dp"
+            android:layout_weight="1">
 
             <TextView
                 android:id="@+id/username"
@@ -59,6 +60,18 @@
                 android:textSize="14sp"
                 android:textColor="@android:color/darker_gray" />
         </LinearLayout>
+
+        <!-- Logout Button -->
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:background="?attr/colorPrimary"
+            android:textColor="@android:color/white"
+            android:elevation="4dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"/>
     </LinearLayout>
 
     <!-- Dashboard Items Section -->
@@ -91,12 +104,12 @@
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/comment_icon" />
+                android:background="@color/black"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Q and A"
+                android:text="Scheduled Activities"
                 android:textSize="16sp"
                 android:layout_marginStart="16dp"
                 android:layout_gravity="center_vertical" />
@@ -120,7 +133,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Item 2"
+                android:text="Comments"
                 android:textSize="16sp"
                 android:layout_marginStart="16dp"
                 android:layout_gravity="center_vertical" />

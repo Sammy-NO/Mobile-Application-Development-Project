@@ -40,8 +40,8 @@ class LoginActivity : AppCompatActivity() {
         if (dbHelper.authenticateUser(username, password)) {
             val role = dbHelper.getUserRole(username)
             val intent = when (role) {
-                "user" -> Intent(this, Dash::class.java)
-                "healthcare_provider" -> Intent(this, DocDashActivity::class.java)
+                "User" -> Intent(this, Dash::class.java)
+                "Healthcare Provider" -> Intent(this, DocDashActivity::class.java)
                 else -> null
             }
             intent?.let {

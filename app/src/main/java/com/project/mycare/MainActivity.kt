@@ -1,20 +1,40 @@
 package com.project.mycare
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        val buttonCreateChildProfile: Button = findViewById(/* id = */ R.id.buttonCreateChildProfile)
+        buttonCreateChildProfile.setOnClickListener {
+            val intent = Intent(this, CreateChildProfileActivity::class.java)
+            startActivity(intent)
         }
+
+        val buttonCreateVaccineProfile: Button = findViewById(R.id.buttonCreateVaccineProfile)
+        buttonCreateVaccineProfile.setOnClickListener {
+            val intent = Intent(this, CreateVaccineProfileActivity::class.java)
+            startActivity(intent)
+        }
+
+        val buttonViewProfiles: Button = findViewById(R.id.buttonViewProfiles)
+        buttonViewProfiles.setOnClickListener {
+            val intent = Intent(this, ViewProfilesActivity::class.java)
+            startActivity(intent)
+        }
+
+        val buttonSetReminder: Button = findViewById(R.id.buttonSetReminder)
+        buttonSetReminder.setOnClickListener {
+            val intent = Intent(this, ReminderSettingsActivity::class.java)
+            startActivity(intent)
+        }
+
+
     }
 }

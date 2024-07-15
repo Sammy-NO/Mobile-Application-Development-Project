@@ -36,13 +36,13 @@ class RegisterActivity : AppCompatActivity() {
 
         userRoleRadio.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
-                role = "user"
+                role = "User"
             }
         }
 
         providerRoleRadio.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
-                role = "healthcare provider"
+                role = "Healthcare Provider"
             }
         }
 

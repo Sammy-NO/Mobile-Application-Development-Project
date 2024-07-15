@@ -28,7 +28,7 @@ class DBHelper(context: Context) :
                 "$COLUMN_PHONE_NUMBER TEXT," +
                 "$COLUMN_USERNAME TEXT," +
                 "$COLUMN_PASSWORD TEXT," +
-                "$COLUMN_ROLE TEXT DEFAULT 'user')"
+                "$COLUMN_ROLE TEXT)"
         db?.execSQL(createTableQuery)
     }
 
