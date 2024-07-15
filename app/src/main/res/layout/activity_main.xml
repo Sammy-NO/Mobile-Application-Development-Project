@@ -3,13 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:gravity="center">
 
     <!-- Title -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Child Services"
+        android:text="@string/child_services"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_gravity="center_horizontal"
@@ -18,42 +19,34 @@
     <!-- Buttons -->
     <Button
         android:id="@+id/buttonCreateChildProfile"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create Your Child's Profile"
-        android:layout_marginBottom="16dp" />
+        android:text="@string/create_your_child_s_profile"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center_horizontal"/>
 
     <Button
         android:id="@+id/buttonCreateVaccineProfile"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create a Vaccine Profile"
-        android:layout_marginBottom="16dp" />
+        android:text="@string/create_a_vaccine_profile"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center_horizontal"/>
 
     <Button
         android:id="@+id/buttonViewProfiles"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="View Saved Vaccine Profiles"
-        android:layout_marginBottom="16dp" />
+        android:text="@string/view_saved_vaccine_profiles"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center_horizontal"/>
 
     <Button
         android:id="@+id/buttonSetReminder"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Set a Vaccine Reminder"
-        android:layout_marginBottom="16dp" />
-
-    <!-- Space for Pictures -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:orientation="horizontal"
-        android:gravity="center_vertical|center_horizontal"
-        android:background="@android:color/darker_gray"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp">
-        <!-- Add ImageViews or ImageButtons here for pictures -->
-    </LinearLayout>
+        android:text="@string/set_a_vaccine_reminder"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center_horizontal"/>
 
 </LinearLayout>

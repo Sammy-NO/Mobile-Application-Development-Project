@@ -9,7 +9,7 @@
         android:id="@+id/spinnerChildName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Select Child Name" />
+        android:hint="@string/select_child_name_profile" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewProfiles"

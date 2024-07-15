@@ -4,16 +4,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="#f0f0f0">
 
     <EditText
         android:id="@+id/editTextPatientName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autofillHints=""
-        android:hint="Patient Name"
+        android:hint="@string/patient_name"
         android:inputType="textPersonName"
-        android:minHeight="48dp"/>
+        android:minHeight="48dp"
+        android:background="@drawable/border"
+        android:padding="12dp" />
 
     <EditText
         android:id="@+id/editTextAppointmentDate"
@@ -21,9 +24,12 @@
         android:layout_height="wrap_content"
         android:autofillHints=""
         android:focusable="false"
-        android:hint="Appointment Date"
+        android:hint="@string/appointment_date"
         android:inputType="date"
-        android:minHeight="48dp"/>
+        android:minHeight="48dp"
+        android:background="@drawable/border"
+        android:padding="12dp"
+        android:layout_marginTop="8dp" />
 
     <EditText
         android:id="@+id/editTextAppointmentTime"
@@ -31,21 +37,29 @@
         android:layout_height="wrap_content"
         android:autofillHints=""
         android:focusable="false"
-        android:hint="Appointment Time"
-        android:minHeight="48dp"/>
+        android:hint="@string/appointment_time"
+        android:minHeight="48dp"
+        android:background="@drawable/border"
+        android:padding="12dp"
+        android:layout_marginTop="8dp" />
 
     <EditText
         android:id="@+id/editTextContactInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autofillHints=""
-        android:hint="Contact Information"
+        android:hint="@string/contact_information"
         android:inputType="textEmailAddress"
-        android:minHeight="48dp"/>
+        android:minHeight="48dp"
+        android:background="@drawable/border"
+        android:padding="12dp"
+        android:layout_marginTop="8dp" />
 
     <Button
         android:id="@+id/buttonScheduleAppointment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Book Appointment"/>
+        android:text="@string/book_appointment"
+        android:padding="12dp"
+        android:layout_marginTop="8dp" />
 </LinearLayout>

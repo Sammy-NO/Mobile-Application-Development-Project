@@ -11,5 +11,5 @@
     <color name="colorSecondaryVariant">#388E3C</color> <!-- Dark Green -->
     <color name="colorButtonNormal">#4CAF50</color> <!-- Green Button -->
     <color name="editTextColor">#212121</color> <!-- Dark Text Color for EditText -->
-
+    <color name="black">#000000</color>
 </resources>

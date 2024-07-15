@@ -38,15 +38,13 @@ class Dash : AppCompatActivity() {
         // Fetch user data from database
         val currentUser = dbHelper.getCurrentUser()
 
-        // Check if user data is retrieved successfully
+
         if (currentUser != null) {
             usernameTextView.text = currentUser.username
             userEmailTextView.text = currentUser.email
         } else {
-            // Handle case where user data could not be retrieved
             usernameTextView.text = getString(R.string.unknown_dash_message)
             userEmailTextView.text = getString(R.string.no_email_dash_message)
-            // Set a default profile image or handle absence of profile image
         }
 
         // Set Dashboard Items
@@ -54,7 +52,6 @@ class Dash : AppCompatActivity() {
     }
 
     private fun setupDashboardItems() {
-        // Example: Uncomment and set up your dashboard items here
         val ChildServicesMenu: LinearLayout = findViewById(R.id.childservices)
         val scheduleOutpatientItem: LinearLayout = findViewById(R.id.scheduleVisit)
         val bookCounselingItem: LinearLayout = findViewById(R.id.bookTherapy)
@@ -67,18 +64,13 @@ class Dash : AppCompatActivity() {
       scheduleOutpatientItem.setOnClickListener {
           startActivity(Intent(this, ScheduleAppointmentActivity::class.java))
       }
-
         bookCounselingItem.setOnClickListener {
            startActivity(Intent(this, TherapyAppointmentActivity::class.java))
        }
-
        inquiriesItem.setOnClickListener {
-            // Handle inquiries click
            startActivity(Intent(this, SubmitCommentActivity::class.java))
         }
-//
         faqsItem.setOnClickListener {
-           // Handle FAQs click
             startActivity(Intent(this, FAQActivity::class.java))
         }
 

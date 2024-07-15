@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
+    android:background="#f0f0f0"
     tools:context=".CommentsActivity">
 
     <!-- Comments Section -->
     <ScrollView
         android:id="@+id/commentsScrollView"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_height="0dp">
 
         <LinearLayout
             android:id="@+id/commentsSection"
@@ -19,14 +19,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp"
-            android:background="@android:color/white"
-            android:elevation="2dp">
+            android:elevation="2dp"
+            android:background="@drawable/border">
 
             <TextView
                 android:id="@+id/commentTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Comments"
+                android:text="@string/comments_title"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp" />
@@ -42,15 +42,15 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="16dp"
-        android:background="@android:color/white"
         android:elevation="2dp"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/border">
 
         <TextView
             android:id="@+id/respondToCommentTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Respond to Comment"
+            android:text="@string/respond_to_comment"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginBottom="8dp" />
@@ -59,14 +59,14 @@
             android:id="@+id/responseEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Write a response..."
+            android:hint="@string/write_a_response"
             android:layout_marginBottom="8dp" />
 
         <Button
             android:id="@+id/responseButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Respond"
+            android:text="@string/respond_button"
             android:background="@color/colorBackground"
             android:textColor="@android:color/white"
             android:layout_marginBottom="8dp" />

@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
+    android:background="#f0f0f0"
     tools:context=".Dash">
 
     <!-- Toolbar -->
@@ -12,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
-        android:title="Dashboard"
+        android:title="@string/doc_dashboard"
         android:titleTextColor="@android:color/white"
         android:elevation="4dp" />
 
@@ -25,8 +26,8 @@
         android:layout_marginTop="16dp"
         android:orientation="horizontal"
         android:padding="16dp"
-        android:background="@color/colorBackground"
-        android:elevation="2dp">
+        android:elevation="2dp"
+        android:background="@drawable/border">
 
         <ImageView
             android:id="@+id/profileImage"
@@ -48,7 +49,8 @@
                 android:id="@+id/username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Insert Login username"
+                android:text="@string/insert_login_username_doc"
+                android:textColor = "@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -56,9 +58,9 @@
                 android:id="@+id/userEmail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="john.doe@example.com"
-                android:textSize="14sp"
-                android:textColor="@android:color/darker_gray" />
+                android:textColor = "@color/black"
+                android:text="@string/john_doe_example_com_doc"
+                android:textSize="14sp"/>
         </LinearLayout>
 
         <!-- Logout Button -->
@@ -66,7 +68,7 @@
             android:id="@+id/logoutButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Logout"
+            android:text="@string/doc_logout"
             android:background="?attr/colorPrimary"
             android:textColor="@android:color/white"
             android:elevation="4dp"
@@ -86,7 +88,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Services"
+            android:text="@string/doc_services"
+            android:textColor = "@color/black"
             android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginBottom="8dp" />
@@ -97,23 +100,22 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="16dp"
-            android:background="@color/colorBackground"
-            android:layout_marginBottom="8dp">
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/border">
 
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@color/colorSecondary" />
+                android:src="@drawable/respond" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Comments"
+                android:text="@string/doc_comments"
+                android:textColor = "@color/black"
                 android:textSize="16sp"
                 android:layout_marginStart="16dp"
                 android:layout_gravity="center_vertical" />
         </LinearLayout>
-
-
     </LinearLayout>
 </RelativeLayout>

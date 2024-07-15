@@ -9,20 +9,20 @@
         android:id="@+id/spinnerChildName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Select Child Name" />
+        android:hint="@string/select_child_name" />
 
     <EditText
         android:id="@+id/editAgeInWeeks"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Age in weeks"
+        android:hint="@string/age_in_weeks"
         android:inputType="number" />
 
     <Button
         android:id="@+id/buttonSelectVaccines"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Select Pending Vaccines" />
+        android:text="@string/select_pending_vaccines" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,7 +33,7 @@
             android:id="@+id/vaccineViewTooltip"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:contentDescription="Tooltip"
+            android:contentDescription="@string/tooltip"
             android:src="@drawable/ic_info" />
     </LinearLayout>
 
@@ -41,12 +41,12 @@
         android:id="@+id/textViewSelectedChoices"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Selected Vaccines" />
+        android:text="@string/selected_vaccines" />
 
     <Button
         android:id="@+id/buttonSave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Save" />
+        android:text="@string/save_vaccine" />
 
 </LinearLayout>

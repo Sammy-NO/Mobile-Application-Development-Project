@@ -18,7 +18,7 @@
         android:id="@+id/commentText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="This is a sample comment."
+        android:text="@string/sample_comment"
         android:textSize="14sp"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="8dp" />
@@ -27,7 +27,7 @@
         android:id="@+id/buttonRespond"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Respond"
+        android:text="@string/respond_comment"
         android:background="@color/colorSecondary"
         android:textColor="@android:color/white" />
 

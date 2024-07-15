@@ -114,7 +114,7 @@
             android:id="@+id/radioHealthCareProvider"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Health Care Provider" />
+            android:text="@string/healthcare_option" />
     </RadioGroup>
 
     <Button

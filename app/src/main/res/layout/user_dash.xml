@@ -2,7 +2,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#f0f0f0">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,8 +16,9 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:title="Dashboard"
-            android:elevation="4dp" />
+            android:title="@string/user_dash"
+            android:elevation="4dp"
+            android:background="@color/colorAccent"/>
 
         <!-- User Profile Section -->
         <LinearLayout
@@ -48,16 +50,18 @@
                 <TextView
                     android:id="@+id/username"
                     android:layout_width="wrap_content"
+                    android:textColor = "@color/black"
                     android:layout_height="wrap_content"
-                    android:text="Insert Login username"
+                    android:text="@string/insert_login_username_user"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/userEmail"
                     android:layout_width="wrap_content"
+                    android:textColor = "@color/black"
                     android:layout_height="wrap_content"
-                    android:text="john.doe@example.com"
+                    android:text="@string/john_doe_example_com_user"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -65,10 +69,11 @@
                 android:id="@+id/logoutButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Logout"
+                android:text="@string/logout_user"
                 android:elevation="4dp"
                 android:layout_gravity="center_vertical"
-                android:layout_marginStart="16dp"/>
+                android:layout_marginStart="16dp"
+                android:background="@color/colorAccent"/>
         </LinearLayout>
 
         <!-- Dashboard Items Section -->
@@ -83,9 +88,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Services"
+                android:text="@string/services_user"
                 android:textSize="16sp"
                 android:textStyle="bold"
+                android:textColor = "@color/black"
                 android:layout_marginBottom="8dp" />
 
             <LinearLayout
@@ -94,18 +100,21 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="16dp"
-                android:layout_marginBottom="8dp">
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/border">
 
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@color/colorButtonNormal"/>
+                    android:src="@drawable/baby_icon"
+                    android:contentDescription="Services for your child"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Child Services"
+                    android:text="@string/child_services_user"
                     android:textSize="16sp"
+                    android:textColor = "@color/black"
                     android:layout_marginStart="16dp"
                     android:layout_gravity="center_vertical" />
             </LinearLayout>
@@ -116,18 +125,21 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="16dp"
-                android:layout_marginBottom="8dp">
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/border">
 
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@color/colorButtonNormal"/>
+                    android:src="@drawable/appointment_icon"
+                    android:contentDescription="@string/book_an_appointment"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Schedule outpatient visit"
+                    android:text="@string/schedule_outpatient_visit"
                     android:textSize="16sp"
+                    android:textColor = "@color/black"
                     android:layout_marginStart="16dp"
                     android:layout_gravity="center_vertical" />
             </LinearLayout>
@@ -143,13 +155,15 @@
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@color/colorButtonNormal"/>
+                    android:src="@drawable/counselling_icon"
+                    android:contentDescription="@string/book_a_therapy_session"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Book a Counselling/Therapy Session"
+                    android:text="@string/book_a_counselling_therapy_session"
                     android:textSize="16sp"
+                    android:textColor = "@color/black"
                     android:layout_marginStart="16dp"
                     android:layout_gravity="center_vertical" />
             </LinearLayout>
@@ -160,18 +174,21 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="16dp"
-                android:layout_marginBottom="8dp">
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/border">
 
                 <ImageView
                     android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@color/colorButtonNormal"/>
+                    android:layout_height="32dp"
+                    android:src="@drawable/questions_icon"
+                    android:contentDescription="@string/submit_questions_here"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Inquiries"
+                    android:text="@string/inquiries"
                     android:textSize="16sp"
+                    android:textColor = "@color/black"
                     android:layout_marginStart="16dp"
                     android:layout_gravity="center_vertical" />
             </LinearLayout>
@@ -182,18 +199,21 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="16dp"
-                android:layout_marginBottom="8dp">
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/border">
 
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@color/colorButtonNormal" />
+                    android:src="@drawable/faqs"
+                    android:contentDescription="@string/faqs"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="FAQs"
                     android:textSize="16sp"
+                    android:textColor = "@color/black"
                     android:layout_marginStart="16dp"
                     android:layout_gravity="center_vertical" />
             </LinearLayout>
