@@ -1,5 +1,6 @@
 package com.project.mycare
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -53,13 +54,14 @@ class Dash : AppCompatActivity() {
         setupDashboardItems()
     }
 
+    @SuppressLint("SuspiciousIndentation")
     private fun setupDashboardItems() {
         // Example: Uncomment and set up your dashboard items here
     val ChildServicesMenu: LinearLayout = findViewById(R.id.childservices)
 //        val scheduleOutpatientItem: LinearLayout = findViewById(R.id.scheduleOutpatientItem)
 //        val bookCounselingItem: LinearLayout = findViewById(R.id.bookCounselingItem)
-//        val inquiriesItem: LinearLayout = findViewById(R.id.inquiriesItem)
-//        val faqsItem: LinearLayout = findViewById(R.id.faqsItem)
+       val inquiriesItem: LinearLayout = findViewById(R.id.dashInquiries)
+        val faqsItem: LinearLayout = findViewById(R.id.faqsItem)
 
        ChildServicesMenu.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
@@ -75,10 +77,10 @@ class Dash : AppCompatActivity() {
 //            startActivity(Intent(this, BookCounselingActivity::class.java))
 //        }
 //
-//        inquiriesItem.setOnClickListener {
-//            // Handle inquiries click
-//            startActivity(Intent(this, InquiriesActivity::class.java))
-//        }
+       inquiriesItem.setOnClickListener {
+            // Handle inquiries click
+            startActivity(Intent(this, CommentsActivity::class.java))
+        }
 //
 //        faqsItem.setOnClickListener {
 //            // Handle FAQs click
