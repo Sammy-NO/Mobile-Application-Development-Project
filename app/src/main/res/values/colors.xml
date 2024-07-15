@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name ="green">#00FF00</color>
-    <color name="red">#EE4B2B</color>
+    <color name="colorPrimary">#2196F3</color> <!-- Blue -->
+    <color name="colorPrimaryDark">#1976D2</color> <!-- Dark Blue -->
+    <color name="colorAccent">#FF4081</color> <!-- Pink -->
+    <color name="colorBackground">#FFFFFF</color> <!-- White -->
+    <color name="textColor">#212121</color> <!-- Dark Text Color -->
+    <color name="colorControlNormal">#757575</color> <!-- Grey -->
+    <color name="colorPrimaryVariant">#1976D2</color> <!-- Dark Blue -->
+    <color name="colorSecondary">#4CAF50</color> <!-- Green -->
+    <color name="colorSecondaryVariant">#388E3C</color> <!-- Dark Green -->
+    <color name="colorButtonNormal">#4CAF50</color> <!-- Green Button -->
+    <color name="editTextColor">#212121</color> <!-- Dark Text Color for EditText -->
 </resources>

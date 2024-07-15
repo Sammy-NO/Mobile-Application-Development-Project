@@ -2,21 +2,6 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
-      <entry key="CommentsActivity">
-        <State />
-      </entry>
-      <entry key="Dash">
-        <State />
-      </entry>
-      <entry key="DocDashActivity">
-        <State />
-      </entry>
-      <entry key="MainActivity">
-        <State />
-      </entry>
-      <entry key="RegisterActivity">
-        <State />
-      </entry>
       <entry key="app">
         <State />
       </entry>

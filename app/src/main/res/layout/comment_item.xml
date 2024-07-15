@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@color/white"
+    android:background="@color/colorBackground"
     android:layout_marginBottom="8dp">
 
     <TextView
@@ -35,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ignore"
-            android:background="@color/red"
+            android:background="@color/colorAccent"
             android:textColor="@android:color/white"
             android:layout_marginEnd="8dp" />
 
@@ -44,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Reviewed"
-            android:background="@color/green"
+            android:background="@color/colorSecondary"
             android:textColor="@android:color/white" />
     </LinearLayout>
 </LinearLayout>
