@@ -1,0 +1,82 @@
+
+@Entity(tableName = "upcoming_activities")
+data class UpcomingActivity(
+    @PrimaryKey(autoGenerate = true) val id: Long,
+    val title: String,
+    val date: Long, // Store date in milliseconds since epoch for easier sorting
+    val time: String
+)
+
+@Dao
+interface UpcomingActivityDao {
+    @Insert(onConflict = OnConflictStrategy.REPLACE) // Update existing activity if conflict
+    suspend fun insertActivity(activity: UpcomingActivity)
+
+    @Query("SELECT * FROM upcoming_activities ORDER BY date ASC")
+    suspend fun getAllActivities(): List<UpcomingActivity>
+}
+
+@Database(entities = [UpcomingActivity::class], version = 1, exportSchema = false)
+abstract class UpcomingActivitiesDatabase : RoomDatabase() {
+    abstract val upcomingActivityDao: UpcomingActivityDao
+
+    companion object {
+        private const val DATABASE_NAME = "upcoming_activities.db"
+
+        // Singleton to provide a single instance of the database
+        @Volatile
+        private var instance: UpcomingActivitiesDatabase? = null
+
+        fun getInstance(context: Context): UpcomingActivitiesDatabase {
+            if (instance == null) {
+                synchronized(UpcomingActivitiesDatabase::class.java) {
+                    if (instance == null) {
+                        instance = Room.databaseBuilder(context.applicationContext, UpcomingActivitiesDatabase::class.java, DATABASE_NAME)
+                            .fallbackToDestructiveMigration() // Consider using migrations for schema changes
+                            .build()
+                    }
+                }
+            }
+            return instance!!
+        }
+    }
+}
+
+class UpcomingActivitiesRepository(private val db: UpcomingActivitiesDatabase) {
+
+    suspend fun insertSampleActivities() {
+        val activities = listOf(
+            UpcomingActivity(0, "Sample Activity 1", convertDateToMillis(2024, 8, 20, 10, 0), "10:00 AM"),
+            UpcomingActivity(0, "Sample Activity 2", convertDateToMillis(2024, 9, 2, 14, 30), "2:30 PM"),
+            UpcomingActivity(0, "Sample Activity 3", convertDateToMillis(2024, 10, 5, 9, 45), "9:45 AM"),
+            UpcomingActivity(0, "Sample Activity 4", convertDateToMillis(2024, 11, 10, 15, 15), "3:15 PM"),
+            UpcomingActivity(0, "Sample Activity 5", convertDateToMillis(2024, 12, 15, 11, 30), "11:30 AM")
+        )
+        db.upcomingActivityDao.insertActivity(activities[0]) // Insert activities one by one (consider bulk insert for efficiency)
+        db.upcomingActivityDao.insertActivity(activities[1])
+        db.upcomingActivityDao.insertActivity(activities[2])
+        db.upcomingActivityDao.insertActivity(activities[3])
+        db.upcomingActivityDao.insertActivity(activities[4])
+    }
+
+    suspend fun getAllActivities(): List<UpcomingActivity> {
+        return db.upcomingActivityDao.getAllActivities()
+    }
+
+    private fun convertDateToMillis(year: Int, month: Int, day: Int, hour: Int, minute: Int): Long {
+        val calendar = Calendar.getInstance()
+        calendar.set(Calendar.YEAR, year)
+        calendar.set(Calendar.MONTH, month - 1) // Month is 0-indexed
+        calendar.set(Calendar.DAY_OF_MONTH, day)
+        calendar.set(Calendar.HOUR_OF_DAY, hour)
+        calendar.set(Calendar.MINUTE, minute)
+        return calendar.timeInMillis
+    }
+}
+2. ViewModel Update:
+
+class DoctorUpcomingActivitiesViewModel(private val repository: UpcomingActivitiesRepository) : ViewModel() {
+
+    val upcomingActivities = liveData {
+        emitSource(repository.getAllActivities())
+    }
