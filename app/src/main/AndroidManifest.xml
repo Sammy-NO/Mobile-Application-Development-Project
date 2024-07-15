@@ -11,7 +11,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MyCare"
+        android:theme="@style/AppTheme"
         tools:targetApi="31">
 
         <activity
@@ -36,13 +36,11 @@
         <activity
             android:name=".DocDashActivity"
             android:exported="true" >
-            <!-- No intent-filter needed here if it's not a launcher -->
         </activity>
 
         <activity
             android:name=".Dash"
             android:exported="true" >
-            <!-- No intent-filter needed here if it's not a launcher -->
         </activity>
         <activity
             android:name=".CreateChildProfileActivity"
@@ -80,7 +78,14 @@
             android:name=".CommentsActivity"
             android:exported="true" >
         </activity>
-
+        <activity
+            android:name=".ScheduleAppointmentActivity"
+            android:exported="true" >
+        </activity>
+        <activity
+            android:name=".TherapyAppointmentActivity"
+            android:exported="true" >
+        </activity>
     </application>
 
 </manifest>

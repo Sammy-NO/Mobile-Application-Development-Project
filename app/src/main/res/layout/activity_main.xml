@@ -3,31 +3,57 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
     android:padding="16dp">
 
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Child Services"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Buttons -->
     <Button
         android:id="@+id/buttonCreateChildProfile"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Create Child Profile" />
+        android:text="Create Your Child's Profile"
+        android:layout_marginBottom="16dp" />
+
     <Button
         android:id="@+id/buttonCreateVaccineProfile"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Create Vaccine Profile"/>
+        android:text="Create a Vaccine Profile"
+        android:layout_marginBottom="16dp" />
 
     <Button
         android:id="@+id/buttonViewProfiles"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="View saved Vaccine Profiles"/>
+        android:text="View Saved Vaccine Profiles"
+        android:layout_marginBottom="16dp" />
 
     <Button
         android:id="@+id/buttonSetReminder"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Set a vaccine reminder"
-        />
+        android:text="Set a Vaccine Reminder"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Space for Pictures -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical|center_horizontal"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+        <!-- Add ImageViews or ImageButtons here for pictures -->
+    </LinearLayout>
 
 </LinearLayout>

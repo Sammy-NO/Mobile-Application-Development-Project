@@ -137,7 +137,7 @@
         android:text="@string/login_redirect"
         android:textSize="18sp"
         android:gravity="center"
-        android:textColor="@color/black"
+        android:textColor="@color/textColor"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

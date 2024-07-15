@@ -52,35 +52,10 @@ class DocDashActivity : AppCompatActivity() {
 
     private fun setupDashboardItems() {
         val messages: LinearLayout = findViewById(R.id.comments)
-//        val scheduleOutpatientItem: LinearLayout = findViewById(R.id.scheduleOutpatientItem)
-//        val bookCounselingItem: LinearLayout = findViewById(R.id.bookCounselingItem)
-//        val inquiriesItem: LinearLayout = findViewById(R.id.inquiriesItem)
-//        val faqsItem: LinearLayout = findViewById(R.id.faqsItem)
 
         messages.setOnClickListener {
             startActivity(Intent(this, CommentsActivity::class.java))
        }
-//
-//        scheduleOutpatientItem.setOnClickListener {
-//            // Handle schedule outpatient visit click
-//            startActivity(Intent(this, ScheduleOutpatientActivity::class.java))
-//        }
-//
-//        bookCounselingItem.setOnClickListener {
-//            // Handle book counseling click
-//            startActivity(Intent(this, BookCounselingActivity::class.java))
-//        }
-//
-//        inquiriesItem.setOnClickListener {
-//            // Handle inquiries click
-//            startActivity(Intent(this, InquiriesActivity::class.java))
-//        }
-//
-//        faqsItem.setOnClickListener {
-//            // Handle FAQs click
-//            startActivity(Intent(this, FaqsActivity::class.java))
-//        }
-
         val logoutButton: Button = findViewById(R.id.logoutButton)
         logoutButton.setOnClickListener {
             logout()

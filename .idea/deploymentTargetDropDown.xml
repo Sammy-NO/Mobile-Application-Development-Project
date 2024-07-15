@@ -5,13 +5,13 @@
       <entry key="CommentsActivity">
         <State />
       </entry>
-      <entry key="DocDashActivity">
-        <State />
-      </entry>
       <entry key="FAQActivity">
         <State />
       </entry>
       <entry key="MainActivity">
+        <State />
+      </entry>
+      <entry key="PatientScheduleActivity">
         <State />
       </entry>
       <entry key="SubmitCommentActivity">

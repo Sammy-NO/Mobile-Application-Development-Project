@@ -55,26 +55,23 @@ class Dash : AppCompatActivity() {
 
     private fun setupDashboardItems() {
         // Example: Uncomment and set up your dashboard items here
-    val ChildServicesMenu: LinearLayout = findViewById(R.id.childservices)
-//        val scheduleOutpatientItem: LinearLayout = findViewById(R.id.scheduleOutpatientItem)
-//        val bookCounselingItem: LinearLayout = findViewById(R.id.bookCounselingItem)
-        val inquiriesItem: LinearLayout = findViewById(R.id.sendenquiry)
+        val ChildServicesMenu: LinearLayout = findViewById(R.id.childservices)
+        val scheduleOutpatientItem: LinearLayout = findViewById(R.id.scheduleVisit)
+        val bookCounselingItem: LinearLayout = findViewById(R.id.bookTherapy)
+        val inquiriesItem: LinearLayout = findViewById(R.id.dashInquiries)
         val faqsItem: LinearLayout = findViewById(R.id.faqlist)
 
        ChildServicesMenu.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
         }
-//
-//        scheduleOutpatientItem.setOnClickListener {
-//            // Handle schedule outpatient visit click
-//            startActivity(Intent(this, ScheduleOutpatientActivity::class.java))
-//        }
-//
-//        bookCounselingItem.setOnClickListener {
-//            // Handle book counseling click
-//            startActivity(Intent(this, BookCounselingActivity::class.java))
-//        }
-//
+      scheduleOutpatientItem.setOnClickListener {
+          startActivity(Intent(this, ScheduleAppointmentActivity::class.java))
+      }
+
+        bookCounselingItem.setOnClickListener {
+           startActivity(Intent(this, TherapyAppointmentActivity::class.java))
+       }
+
        inquiriesItem.setOnClickListener {
             // Handle inquiries click
            startActivity(Intent(this, SubmitCommentActivity::class.java))

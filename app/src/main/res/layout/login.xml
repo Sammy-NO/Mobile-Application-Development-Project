@@ -68,7 +68,7 @@
         android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="@string/registration_redirect"
-        android:textColor="@color/black"
+        android:textColor="@color/textColor"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
