@@ -58,8 +58,8 @@ class Dash : AppCompatActivity() {
     val ChildServicesMenu: LinearLayout = findViewById(R.id.childservices)
 //        val scheduleOutpatientItem: LinearLayout = findViewById(R.id.scheduleOutpatientItem)
 //        val bookCounselingItem: LinearLayout = findViewById(R.id.bookCounselingItem)
-//        val inquiriesItem: LinearLayout = findViewById(R.id.inquiriesItem)
-//        val faqsItem: LinearLayout = findViewById(R.id.faqsItem)
+        val inquiriesItem: LinearLayout = findViewById(R.id.sendenquiry)
+        val faqsItem: LinearLayout = findViewById(R.id.faqlist)
 
        ChildServicesMenu.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
@@ -75,15 +75,15 @@ class Dash : AppCompatActivity() {
 //            startActivity(Intent(this, BookCounselingActivity::class.java))
 //        }
 //
-//        inquiriesItem.setOnClickListener {
-//            // Handle inquiries click
-//            startActivity(Intent(this, InquiriesActivity::class.java))
-//        }
+       inquiriesItem.setOnClickListener {
+            // Handle inquiries click
+           startActivity(Intent(this, SubmitCommentActivity::class.java))
+        }
 //
-//        faqsItem.setOnClickListener {
-//            // Handle FAQs click
-//            startActivity(Intent(this, FaqsActivity::class.java))
-//        }
+        faqsItem.setOnClickListener {
+           // Handle FAQs click
+            startActivity(Intent(this, FAQActivity::class.java))
+        }
 
         val logoutButton: Button = findViewById(R.id.logoutButton)
         logoutButton.setOnClickListener {

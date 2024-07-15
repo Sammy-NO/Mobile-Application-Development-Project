@@ -117,7 +117,7 @@
 
         <!-- Item 2 -->
         <LinearLayout
-            android:id="@+id/item2"
+            android:id="@+id/comments"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"

@@ -5,16 +5,16 @@
       <entry key="CommentsActivity">
         <State />
       </entry>
-      <entry key="Dash">
+      <entry key="DocDashActivity">
         <State />
       </entry>
-      <entry key="DocDashActivity">
+      <entry key="FAQActivity">
         <State />
       </entry>
       <entry key="MainActivity">
         <State />
       </entry>
-      <entry key="RegisterActivity">
+      <entry key="SubmitCommentActivity">
         <State />
       </entry>
       <entry key="app">

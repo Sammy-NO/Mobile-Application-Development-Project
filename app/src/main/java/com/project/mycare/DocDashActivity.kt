@@ -51,17 +51,15 @@ class DocDashActivity : AppCompatActivity() {
     }
 
     private fun setupDashboardItems() {
-        // Example: Uncomment and set up your dashboard items here
-//        val scheduleVaccineItem: LinearLayout = findViewById(R.id.scheduleVaccineItem)
+        val messages: LinearLayout = findViewById(R.id.comments)
 //        val scheduleOutpatientItem: LinearLayout = findViewById(R.id.scheduleOutpatientItem)
 //        val bookCounselingItem: LinearLayout = findViewById(R.id.bookCounselingItem)
 //        val inquiriesItem: LinearLayout = findViewById(R.id.inquiriesItem)
 //        val faqsItem: LinearLayout = findViewById(R.id.faqsItem)
 
-//        scheduleVaccineItem.setOnClickListener {
-//            // Handle schedule vaccine click
-//            startActivity(Intent(this, ScheduleVaccineActivity::class.java))
-//        }
+        messages.setOnClickListener {
+            startActivity(Intent(this, CommentsActivity::class.java))
+       }
 //
 //        scheduleOutpatientItem.setOnClickListener {
 //            // Handle schedule outpatient visit click

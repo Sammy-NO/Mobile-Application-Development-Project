@@ -44,43 +44,42 @@
             android:exported="true" >
             <!-- No intent-filter needed here if it's not a launcher -->
         </activity>
-
-        <activity
-            android:name=".CommentsActivity"
-            android:exported="true" >
-            <!-- No intent-filter needed here if it's not a launcher -->
-        </activity>
         <activity
             android:name=".CreateChildProfileActivity"
             android:exported="true" >
-            <!-- No intent-filter needed here if it's not a launcher -->
         </activity>
         <activity
             android:name=".CreateVaccineProfileActivity"
             android:exported="true" >
-            <!-- No intent-filter needed here if it's not a launcher -->
         </activity>
         <activity
             android:name=".InfoActivity"
             android:exported="true" >
-            <!-- No intent-filter needed here if it's not a launcher -->
         </activity>
         <activity
             android:name=".ReminderSettingsActivity"
             android:exported="true" >
-            <!-- No intent-filter needed here if it's not a launcher -->
         </activity>
         <activity
             android:name=".ViewProfilesActivity"
             android:exported="true" >
-            <!-- No intent-filter needed here if it's not a launcher -->
         </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true" >
-            <!-- No intent-filter needed here if it's not a launcher -->
         </activity>
-
+        <activity
+            android:name=".SubmitCommentActivity"
+            android:exported="true" >
+        </activity>
+        <activity
+            android:name=".FAQActivity"
+            android:exported="true" >
+        </activity>
+        <activity
+            android:name=".CommentsActivity"
+            android:exported="true" >
+        </activity>
 
     </application>
 
