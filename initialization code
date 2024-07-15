@@ -1,0 +1,2 @@
+comingActivitiesRepository = UpcomingActivitiesRepository(UpcomingActivitiesDatabase.getInstance(requireContext()))
+viewModel.insertSampleActivities()
