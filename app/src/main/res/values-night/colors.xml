@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#d63cc2</color> <!-- Light Purple -->
+    <color name="colorPrimaryDark">#700b63</color> <!-- Dark Purple -->
+    <color name="colorAccent">#FF4081</color> <!-- Pink -->
+    <color name="colorBackground">#363738</color> <!-- Dark Background -->
+    <color name="hintColor" tools:ignore="MissingDefaultResource">#FFFFFF</color>
+    <color name="textColor">#FFFFFF</color> <!-- Light Text Color -->
+    <color name="colorControlNormal">#B0B0B0</color> <!-- Light Grey -->
+    <color name="colorPrimaryVariant">#3700B3</color> <!-- Dark Purple -->
+    <color name="colorSecondary">#03DAC5</color> <!-- Teal -->
+    <color name="colorSecondaryVariant">#018786</color> <!-- Dark Teal -->
+    <color name="colorButtonNormal">#03DAC5</color> <!-- Teal Button -->
+    <color name="editTextColor">#FFFFFF</color> <!-- Light Text Color for EditText -->
+
+</resources>
