@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorBackground">#363738</color>
+    <color name="colorButtonNormal">#03DAC5</color>
+    <color name="colorControlNormal">#B0B0B0</color>
+    <color name="colorPrimary">#d63cc2</color>
+    <color name="colorPrimaryDark">#700b63</color>
+    <color name="colorPrimaryVariant">#3700B3</color>
+    <color name="colorSecondary">#03DAC5</color>
+    <color name="colorSecondaryVariant">#018786</color>
+    <color name="editTextColor">#FFFFFF</color>
+    <color name="hintColor" ns1:ignore="MissingDefaultResource">#FFFFFF</color>
+    <color name="textColor">#FFFFFF</color>
+    <style name="AppTheme.Dark" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="android:hint">@color/hintColor</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/colorControlNormal</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+
+
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item>
+        <item name="android:colorButtonNormal">@color/colorButtonNormal</item>
+        <item name="android:editTextColor">@color/editTextColor</item>
+    </style>
+    <style name="Base.Theme.MyCare" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+</resources>

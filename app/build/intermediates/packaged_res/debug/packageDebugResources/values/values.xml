@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorButtonNormal">#4CAF50</color>
+    <color name="colorControlNormal">#757575</color>
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorPrimaryVariant">#1976D2</color>
+    <color name="colorSecondary">#4CAF50</color>
+    <color name="colorSecondaryVariant">#388E3C</color>
+    <color name="editTextColor">#212121</color>
+    <color name="textColor">#212121</color>
+    <string name="Login_button">Login</string>
+    <string name="age_in_weeks">Age in weeks</string>
+    <string name="app_name">My Care</string>
+    <string name="appointment_date">Appointment Date</string>
+    <string name="appointment_time">Appointment Time</string>
+    <string name="birth_date_yyyy_mm_dd">Birth Date (yyyy-mm-dd)</string>
+    <string name="book_a_counselling_therapy_session">Book a Counselling/Therapy Session</string>
+    <string name="book_a_therapy_session">book a therapy session</string>
+    <string name="book_an_appointment">book an appointment</string>
+    <string name="book_appointment">Book Appointment</string>
+    <string name="child_s_name">Child\'s Name</string>
+    <string name="child_services">Child Services</string>
+    <string name="child_services_user">Child Services</string>
+    <string name="choice">Choice</string>
+    <string name="comments_title">Comments</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="contact_information">Contact Information</string>
+    <string name="create_a_vaccine_profile">Create a Vaccine Profile</string>
+    <string name="create_account">Create Account</string>
+    <string name="create_your_child_s_profile">Create Your Child\'s Profile</string>
+    <string name="doc_comments">Comments</string>
+    <string name="doc_dashboard">Dashboard</string>
+    <string name="doc_logout">Logout</string>
+    <string name="doc_services">Services</string>
+    <string name="enable_reminders">Enable Reminders</string>
+    <string name="enter_your_comment">Enter your comment</string>
+    <string name="enter_your_contact_information">Enter your contact information</string>
+    <string name="faqs">FAQs</string>
+    <string name="healthcare_option">Health Care Provider</string>
+    <string name="inquiries">Inquiries</string>
+    <string name="insert_login_username_doc">Insert Login username</string>
+    <string name="insert_login_username_user">Insert Login username</string>
+    <string name="john_doe_example_com_doc">john.doe@example.com</string>
+    <string name="john_doe_example_com_user">john.doe@example.com</string>
+    <string name="login_password">Enter Your Password</string>
+    <string name="login_redirect">Already Have an Account? Login Here!</string>
+    <string name="login_title">Login</string>
+    <string name="login_username">Username</string>
+    <string name="logout_user">Logout</string>
+    <string name="no_email_dash_message">No Email</string>
+    <string name="patient_name">Patient Name</string>
+    <string name="register_email_address">Email Address</string>
+    <string name="register_new_password">New Password</string>
+    <string name="register_phone_number">Phone Number</string>
+    <string name="register_title">Register</string>
+    <string name="register_username">Username</string>
+    <string name="registration_redirect">Don\'t Have an Account? Register Here!</string>
+    <string name="remaining_time_x_weeks">Remaining time: X weeks</string>
+    <string name="reminder_period_weeks">Reminder Period (weeks)</string>
+    <string name="respond_button">Respond</string>
+    <string name="respond_comment">Respond</string>
+    <string name="respond_to_comment">Respond to Comment</string>
+    <string name="sample_comment">This is a sample comment.</string>
+    <string name="save">Save</string>
+    <string name="save_reminder">Save</string>
+    <string name="save_vaccine">Save</string>
+    <string name="schedule_outpatient_visit">Schedule outpatient visit</string>
+    <string name="select_child_name">Select Child Name</string>
+    <string name="select_child_name_profile">Select Child Name</string>
+    <string name="select_pending_vaccines">Select Pending Vaccines</string>
+    <string name="selected_vaccines">Selected Vaccines</string>
+    <string name="services_user">Services</string>
+    <string name="set_a_vaccine_reminder">Set a Vaccine Reminder</string>
+    <string name="status">Status</string>
+    <string name="submit">Submit</string>
+    <string name="submit_questions_here">Submit questions here</string>
+    <string name="tooltip">Tooltip</string>
+    <string name="tooltip_reminder">Tooltip</string>
+    <string name="unknown_dash_message">Unknown</string>
+    <string name="user_dash">Dashboard</string>
+    <string name="vaccine_info">Please select the vaccines your child is yet to receive. If unsure, please consult your child\'s immunization sheet or your physician. Provided below is the common immunization schedule for children in Kenya. DISCLAIMER: This is simply a tool to help you manage your schedules. The schedule provided below is valid as of 12/07/2024. Consult with your doctor before having any medicine administered to your child. The developer WILL NOT be responsible for any negligence on the part of the parent.</string>
+    <string name="vaccine_name">Vaccine Name</string>
+    <string name="vaccine_schedule">Vaccine Schedule</string>
+    <string name="view_saved_vaccine_profiles">View Saved Vaccine Profiles</string>
+    <string name="write_a_response">Write a response...</string>
+    <style name="Base.Theme.MyCare" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.MyCare" parent="Base.Theme.MyCare"/>
+</resources>

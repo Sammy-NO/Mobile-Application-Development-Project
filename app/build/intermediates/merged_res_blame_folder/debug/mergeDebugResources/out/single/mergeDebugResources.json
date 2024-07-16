@@ -1,0 +1,194 @@
+[
+    {
+        "merged": "com.project.mycare.app-debug-35:/layout_make_comment.xml.flat",
+        "source": "com.project.mycare.app-main-37:/layout/make_comment.xml"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/layout_login.xml.flat",
+        "source": "com.project.mycare.app-main-37:/layout/login.xml"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.project.mycare.app-main-37:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/layout_register.xml.flat",
+        "source": "com.project.mycare.app-main-37:/layout/register.xml"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/layout_activity_info.xml.flat",
+        "source": "com.project.mycare.app-main-37:/layout/activity_info.xml"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/xml_backup_rules.xml.flat",
+        "source": "com.project.mycare.app-main-37:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.project.mycare.app-main-37:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.project.mycare.app-main-37:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/layout_activity_view_profiles.xml.flat",
+        "source": "com.project.mycare.app-main-37:/layout/activity_view_profiles.xml"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.project.mycare.app-main-37:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.project.mycare.app-main-37:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.project.mycare.app-main-37:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/drawable_profile_pic.jpg.flat",
+        "source": "com.project.mycare.app-main-37:/drawable/profile_pic.jpg"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/layout_comment_item.xml.flat",
+        "source": "com.project.mycare.app-main-37:/layout/comment_item.xml"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/layout_activity_comments.xml.flat",
+        "source": "com.project.mycare.app-main-37:/layout/activity_comments.xml"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.project.mycare.app-main-37:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/layout_item_faq.xml.flat",
+        "source": "com.project.mycare.app-main-37:/layout/item_faq.xml"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/layout_activity_main.xml.flat",
+        "source": "com.project.mycare.app-main-37:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/drawable_border.xml.flat",
+        "source": "com.project.mycare.app-main-37:/drawable/border.xml"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.project.mycare.app-main-37:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/drawable_faqs.png.flat",
+        "source": "com.project.mycare.app-main-37:/drawable/faqs.png"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/drawable_respond.jpg.flat",
+        "source": "com.project.mycare.app-main-37:/drawable/respond.jpg"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/drawable_counselling_icon.png.flat",
+        "source": "com.project.mycare.app-main-37:/drawable/counselling_icon.png"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/layout_therapy_counsel_scheduling.xml.flat",
+        "source": "com.project.mycare.app-main-37:/layout/therapy_counsel_scheduling.xml"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/layout_doc_dash.xml.flat",
+        "source": "com.project.mycare.app-main-37:/layout/doc_dash.xml"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.project.mycare.app-main-37:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/layout_dialog_item.xml.flat",
+        "source": "com.project.mycare.app-main-37:/layout/dialog_item.xml"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/layout_activity_create_vaccine_profile.xml.flat",
+        "source": "com.project.mycare.app-main-37:/layout/activity_create_vaccine_profile.xml"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/drawable_ic_notification.png.flat",
+        "source": "com.project.mycare.app-main-37:/drawable/ic_notification.png"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/layout_activity_faq_list.xml.flat",
+        "source": "com.project.mycare.app-main-37:/layout/activity_faq_list.xml"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.project.mycare.app-main-37:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.project.mycare.app-main-37:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/layout_activity_reminder_settings.xml.flat",
+        "source": "com.project.mycare.app-main-37:/layout/activity_reminder_settings.xml"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.project.mycare.app-main-37:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/drawable_questions_icon.png.flat",
+        "source": "com.project.mycare.app-main-37:/drawable/questions_icon.png"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/layout_scheduling.xml.flat",
+        "source": "com.project.mycare.app-main-37:/layout/scheduling.xml"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.project.mycare.app-main-37:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/layout_user_dash.xml.flat",
+        "source": "com.project.mycare.app-main-37:/layout/user_dash.xml"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/drawable_comment_icon.png.flat",
+        "source": "com.project.mycare.app-main-37:/drawable/comment_icon.png"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/layout_item_profile.xml.flat",
+        "source": "com.project.mycare.app-main-37:/layout/item_profile.xml"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/layout_activity_main_scheduling.xml.flat",
+        "source": "com.project.mycare.app-main-37:/layout/activity_main_scheduling.xml"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/layout_activity_create_child_profile.xml.flat",
+        "source": "com.project.mycare.app-main-37:/layout/activity_create_child_profile.xml"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/drawable_ic_info.png.flat",
+        "source": "com.project.mycare.app-main-37:/drawable/ic_info.png"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.project.mycare.app-main-37:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/drawable_appointment_icon.png.flat",
+        "source": "com.project.mycare.app-main-37:/drawable/appointment_icon.png"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/xml_data_extraction_rules.xml.flat",
+        "source": "com.project.mycare.app-main-37:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/drawable_vaccination_schedule.png.flat",
+        "source": "com.project.mycare.app-main-37:/drawable/vaccination_schedule.png"
+    },
+    {
+        "merged": "com.project.mycare.app-debug-35:/drawable_baby_icon.png.flat",
+        "source": "com.project.mycare.app-main-37:/drawable/baby_icon.png"
+    }
+]

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Spinner
+        android:id="@+id/spinnerChildName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/select_child_name" />
+
+    <EditText
+        android:id="@+id/editAgeInWeeks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/age_in_weeks"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/buttonSelectVaccines"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_pending_vaccines" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/vaccineViewTooltip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/tooltip"
+            android:src="@drawable/ic_info" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewSelectedChoices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/selected_vaccines" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save_vaccine" />
+
+</LinearLayout>
